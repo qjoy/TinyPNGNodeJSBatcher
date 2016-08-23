@@ -5,7 +5,7 @@ var tinify = require("./tinify");
 
 /*
 	你可以在global.key数组中输入任意N个key, TinyPNG每个月每个免费的KEY都可以压缩500张图片
-	申请key请到：https://tinypng.com注册获取，将以下数组内容替换成你申请到的key
+	申请key请到：https://tinypng.com/developers/subscription注册获取，将以下数组内容替换成你申请到的key
 	compressAllFiles函数使用你的key的时候，会自动切换，如果你输入3个key，那么第一个key本月
 	压缩数量用完后，会自动切换到第二个key，以此类推。
  */
@@ -36,18 +36,23 @@ global.keyindex = 0;
 tinify.compressAllFiles(
 	'srcfolder:待压缩文件所在文件夹',
 	'dstfolder:压缩完成后文件所在文件夹', ['blockfoldername：不参与压缩文件夹名称'], ['blockkeyword：不参与压缩文件后缀']);
+//例如：tinify.compressAllFiles('/Users/alex_xq/Desktop/youku WORK/laifeng', '/Users/alex_xq/Desktop/out/', ['build'], ['.9.png']);
+
 
 //工具方法：查找所有可以压缩的文件 
-tinify.tools_checkImages(
-	'srcfolder:待压缩文件所在文件夹',
-	'dstfolder:压缩完成后文件所在文件夹', ['blockfoldername：不参与压缩文件夹名称'], ['blockkeyword：不参与压缩文件后缀']);
+// tinify.tools_checkImages(
+// 	'srcfolder:待压缩文件所在文件夹',
+// 	'dstfolder:压缩完成后文件所在文件夹', ['blockfoldername：不参与压缩文件夹名称'], ['blockkeyword：不参与压缩文件后缀']);
+//例如：tinify.tools_checkImages('/Users/alex_xq/Desktop/youku WORK/laifeng', '/Users/alex_xq/Desktop/out/', ['build'], ['.9.png']);
 
 //工具方法：查找并拷贝所有可压缩文件 
-tinify.tools_findImageFiles(
-	'srcfolder:待压缩文件所在文件夹',
-	'dstfolder:压缩完成后文件所在文件夹', ['blockfoldername：不参与压缩文件夹名称'], ['blockkeyword：不参与压缩文件后缀']);
+// tinify.tools_findImageFiles(
+// 	'srcfolder:待压缩文件所在文件夹',
+// 	'dstfolder:压缩完成后文件所在文件夹', ['blockfoldername：不参与压缩文件夹名称'], ['blockkeyword：不参与压缩文件后缀']);
+//例如：tinify.tools_findImageFiles('/Users/alex_xq/Desktop/youku WORK/laifeng', '/Users/alex_xq/Desktop/out/', ['build'], ['.9.png']);
 
 //工具方法：反向将压缩后的文件覆盖原来对等目录结构的文件 
-tinify.tools_overWriteFiles(
-	'srcfolder:待压缩文件所在文件夹',
-	'dstfolder:压缩完成后文件所在文件夹', ['blockfoldername：不参与压缩文件夹名称'], ['blockkeyword：不参与压缩文件后缀']);
+// tinify.tools_overWriteFiles(
+// 	'srcfolder:待压缩文件所在文件夹',
+// 	'dstfolder:压缩完成后文件所在文件夹', ['blockfoldername：不参与压缩文件夹名称'], ['blockkeyword：不参与压缩文件后缀']);
+//例如：tinify.tools_overWriteFiles('/Users/alex_xq/Desktop/out', '/Users/alex_xq/Desktop/youku WORK/laifeng/', ['build'], ['.9.png']);
