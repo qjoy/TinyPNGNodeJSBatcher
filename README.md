@@ -28,6 +28,7 @@
 	* node index.js	
 
 demo运行结果(工程中很多图片都已经被压缩过了，所以压缩率demo中不高，你可以用你的工程看一下，效果明显)：
+
 ![demo](http://7xox5k.com1.z0.glb.clouddn.com/tinypng-demo.png)	
 
 ###实际场景中的批量压缩
@@ -37,6 +38,7 @@ TinyPNG提供了不错的图片压缩，但是免费版本每个月只能免费�
 
 ###申请TinyPNG的KEY
 https://tinypng.com/developers/subscription
+
 ![getapikey](http://7xox5k.com1.z0.glb.clouddn.com/tinypnggetapikey.png)
 
 ###解决痛点
